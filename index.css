@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Telugu&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 1.5s;
+    font-family: 'Anek Telugu', sans-serif;
+}
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ece9e673;
+}
+.card { width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ECE9E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;    
+    border-radius: 40px 10px;
+    transform: translate(-200px);
+    animation: box 3s;
+}
+.card-img {
+    width: 30%;
+    border-radius: 40px 20px;
+    padding: 10px 15px;
+    opacity: 0.8;
+    animation: toRight 1s;
+}
+.card-body{
+    width: 350px;
+    margin-left: 10px;
+    backdrop-filter: blur;
+}
+.card-title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    animation: toLeft 2s;
+    color: #e07a5f;
+}
+.card-text {
+    width: 300px;
+    text-align: justify;
+    line-height: 1.5rem;
+    animation: toLeft 1.5s;
+    color: #001d3d;
+}
+.btn {
+    margin: 10px;
+    padding: 5px 20px;
+    text-align: center;
+    border: none;
+    background-color: #ECE9E6;
+    color: #e07a5f;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    border-radius: 10px;
+    font-size: 16px;
+    animation: fade 1.5s;
+}
+@keyframes toRight {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 0.8;
+    }
+}
+@keyframes toLeft {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(0);
+        opacity: 0.8;
+    }
+}
+@keyframes fade {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes box {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    30% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    60% {
+        transform: translateY(-100px);
+        opacity: 1;
+    }
+    80% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-200px);
+        opacity: 1;
+    }
+}
+.card:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.btn:hover {
+    background-color: #e07a5f;
+    color: #FFFFFF;
+    opacity: 0.5;
+    font-weight: bold;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    cursor: url('img/kiss.png'), auto;
+}
+.card-img:hover {
+    transform: translate(-30px,-30px) rotate(-10deg) scale(1.1);
+    opacity: 1;
+}
